@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.enigmata.myapplication.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_enterUserNameFragment"
+            app:destination="@id/enterUserNameFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_scheduleDriverFragment"
+            app:destination="@id/scheduleDriverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookRideFragment"
+        android:name="com.enigmata.myapplication.BookRideFragment"
+        android:label="fragment_book_ride"
+        tools:layout="@layout/fragment_book_ride" >
+        <action
+            android:id="@+id/action_bookRideFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+        <action
+            android:id="@+id/action_bookRideFragment_to_datePickerFragment"
+            app:destination="@id/datePickerFragment" />
+        <action
+            android:id="@+id/action_bookRideFragment_to_timePickerFragment"
+            app:destination="@id/timePickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.enigmata.myapplication.ScheduleFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_scheduleFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_scheduleFragment_to_bookRideFragment"
+            app:destination="@id/bookRideFragment" />
+        <action
+            android:id="@+id/action_scheduleFragment_to_myRideFragment"
+            app:destination="@id/myRideFragment" />
+        <action
+            android:id="@+id/action_scheduleFragment_to_enterUserNameFragment"
+            app:destination="@id/enterUserNameFragment" />
+        <argument
+            android:name="customer_name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/myRideFragment"
+        android:name="com.enigmata.myapplication.MyRideFragment"
+        android:label="fragment_my_ride"
+        tools:layout="@layout/fragment_my_ride" >
+        <action
+            android:id="@+id/action_myRideFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterUserNameFragment"
+        android:name="com.enigmata.myapplication.EnterUserNameFragment"
+        android:label="fragment_enter_user_name"
+        tools:layout="@layout/fragment_enter_user_name" >
+        <action
+            android:id="@+id/action_enterUserNameFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_enterUserNameFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerInfoFragment"
+        android:name="com.enigmata.myapplication.CustomerInfoFragment"
+        android:label="fragment_customer_info"
+        tools:layout="@layout/fragment_customer_info" />
+
+    <dialog
+        android:id="@+id/datePickerFragment"
+        android:name="com.enigmata.myapplication.DatePickerFragment"
+        android:label="DatePickerFragment" />
+    <dialog
+        android:id="@+id/timePickerFragment"
+        android:name="com.enigmata.myapplication.TimePickerFragment"
+        android:label="TimePickerFragment" />
+    <fragment
+        android:id="@+id/scheduleDriverFragment"
+        android:name="com.enigmata.myapplication.ScheduleDriverFragment"
+        android:label="ScheduleDriverFragment" >
+        <action
+            android:id="@+id/action_scheduleDriverFragment_to_customerInfoFragment"
+            app:destination="@id/customerInfoFragment" />
+        <action
+            android:id="@+id/action_scheduleDriverFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+</navigation>

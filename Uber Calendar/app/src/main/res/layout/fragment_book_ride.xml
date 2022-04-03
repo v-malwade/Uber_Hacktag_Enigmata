@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".BookRideFragment">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/black"
+            android:id="@+id/topAppBarBookRide">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/back_btn_book_ride"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/uber_bold"
+                    android:text="Book Ride"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fromCv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@id/topAppBarBookRide">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/from_tv"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    android:fontFamily="@font/uber_medium"
+                    android:gravity="center"
+                    android:text="From"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_toRightOf="@id/from_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/from_et_bookRide"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:hint="@string/enter_a_location"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="100dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/to_cv"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@id/fromCv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/to_tv"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    android:text="To"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/uber_medium"
+                    android:gravity="center" />
+
+                <EditText
+                    android:layout_toRightOf="@id/to_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/to_et_bookRide"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:hint="@string/enter_a_location"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/uber_blue"
+            android:layout_marginHorizontal="40dp"
+            app:cardElevation="100dp"
+            android:id="@+id/book_ride_button"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="BOOK RIDE"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:fontFamily="@font/uber_bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/to_cv"
+            app:cardElevation="100dp"
+            android:id="@+id/datePickerCv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23/05/22"
+                    android:id="@+id/date_tv"
+                    android:fontFamily="@font/uber_medium"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/date_tv"
+                    android:background="@color/uber_blue" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/date_icon"
+                    android:layout_toRightOf="@id/date_tv"
+                    android:padding="10dp"
+                    android:src="@drawable/calendar_icon" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/to_cv"
+            app:cardElevation="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/TimePickerCv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/uber_medium"
+                    android:text="03:00 PM"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/time_tv"
+                    android:background="@color/uber_blue" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/timeIcon_iv_bookRide"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/time_tv"
+                    android:padding="10dp"
+                    android:src="@drawable/timelogo" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/cars_ll"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/datePickerCv"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/sedan"
+                app:cardElevation="100dp"
+                android:background="@color/black">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/sedan" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:id="@+id/sedan_textCard"
+                        android:layout_alignParentBottom="true"
+                        app:cardBackgroundColor="@color/uber_blue"
+                        app:cardCornerRadius="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Sedan"
+
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:fontFamily="@font/uber_medium" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/mini"
+                app:cardElevation="100dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/mini" />
+
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:id="@+id/mini_textCard"
+                        android:layout_alignParentBottom="true"
+                        app:cardBackgroundColor="@color/black">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/uber_medium"
+                            android:gravity="center"
+                            android:text="Mini"
+                            android:textColor="@color/white" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/suv"
+                app:cardElevation="100dp">
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/suv" />
+
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:id="@+id/suv_textCard"
+                        android:layout_alignParentBottom="true"
+                        app:cardBackgroundColor="@color/black">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="SUV"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:fontFamily="@font/uber_medium" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:padding="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cars_ll"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Switch
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/switchPool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/uber_bold"
+                    android:switchPadding="20dp"
+                    android:text="Car Pool"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/totalFareHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/switchPool"
+                    android:fontFamily="@font/uber_medium"
+                    android:text="Total Fare"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/totalFareHeading"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/stroke"
+                    android:padding="20dp"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/uber_bold"
+                    android:text="Rs 1000" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

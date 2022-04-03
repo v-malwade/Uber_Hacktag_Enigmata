@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginFragment">
+
+        <ImageView
+            android:id="@+id/uber_logo"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:elevation="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/uber_logo" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/calenderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="@color/uber_blue"
+            android:layout_below="@id/uber_logo"
+            android:layout_marginHorizontal="40dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/uber_bold"
+                android:text="Calendar"
+                android:textSize="30dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/calenderText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardCornerRadius="40dp"
+            android:id="@+id/loginCus"
+            android:layout_marginHorizontal="40dp"
+            app:cardBackgroundColor="@color/black">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/uber_medium"
+                    android:gravity="center"
+                    android:text="Login as Customer"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/loginDr"
+            android:layout_below="@id/loginCus"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardCornerRadius="40dp"
+            android:layout_marginHorizontal="40dp"
+            app:cardBackgroundColor="@color/black">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/uber_medium"
+                    android:gravity="center"
+                    android:text="Login as Driver"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationViewCar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="-50dp"
+            android:layout_marginBottom="-100dp"
+            android:padding="200dp"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/car_anim" />
+
+    </RelativeLayout>
+</layout>
